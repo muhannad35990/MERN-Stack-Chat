@@ -7,7 +7,7 @@ const Main = () => {
   const [selectedChat, setSelectedChat] = useState(-1);
   return (
     <div className="h-90% w-5/6 bg-white absolute top-12 shadow-lg flex rounded-xl ">
-      <div className="w-1/3 h-full border-r">
+      <div className="w-1/3 h-full border-r flex flex-col">
         <div className=" bg-white p-2  flex  items-center flex-col   border-gray-300 bg-gray-100">
           <div className="flex  self-end  mb-2 ">
             <IconButton>
@@ -23,7 +23,7 @@ const Main = () => {
             className="w-90% border rounded-full  outline-none px-4 text-sm  text-gray-600 py-2 focus:outline-none  focus:ring-1 focus:border-purple-300  transition ease-in duration-100 mb-4"
           />
         </div>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col flex-1 overflow-y-auto">
           <SingleChat
             id={1}
             selectedChat={selectedChat}
@@ -46,6 +46,31 @@ const Main = () => {
           />
           <SingleChat
             id={5}
+            selectedChat={selectedChat}
+            setSelectedChat={setSelectedChat}
+          />
+          <SingleChat
+            id={6}
+            selectedChat={selectedChat}
+            setSelectedChat={setSelectedChat}
+          />
+          <SingleChat
+            id={7}
+            selectedChat={selectedChat}
+            setSelectedChat={setSelectedChat}
+          />
+          <SingleChat
+            id={8}
+            selectedChat={selectedChat}
+            setSelectedChat={setSelectedChat}
+          />
+          <SingleChat
+            id={9}
+            selectedChat={selectedChat}
+            setSelectedChat={setSelectedChat}
+          />
+          <SingleChat
+            id={10}
             selectedChat={selectedChat}
             setSelectedChat={setSelectedChat}
           />
