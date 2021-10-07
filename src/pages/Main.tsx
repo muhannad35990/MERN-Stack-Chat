@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Settings, Chat } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import SingleChat from "../components/SingleChat";
+import ChatContent from "../components/ChatContent";
 const Main = () => {
-  const [selectedChat, setSelectedChat] = useState(0);
+  const [selectedChat, setSelectedChat] = useState(-1);
   return (
     <div className="h-90% w-5/6 bg-white absolute top-12 shadow-lg flex rounded-xl">
       <div className="w-1/3 h-full bg-white">
@@ -50,7 +51,9 @@ const Main = () => {
           />
         </div>
       </div>
-      <div className="w-full h-full bg-gray-100"></div>
+      <div className="w-full h-full bg-gray-100">
+        <ChatContent />
+      </div>
     </div>
   );
 };
