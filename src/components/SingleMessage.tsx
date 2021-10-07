@@ -20,7 +20,7 @@ const SingleMessage: FC<Iprops> = ({ sender, message, date, isReceived }) => {
       <h1
         className={`rounded-full ${
           isReceived
-            ? "bg-white text-purple-900 border-2 border-purple-900"
+            ? "bg-white text-purple-900 border border-purple-900"
             : "bg-purple-900 text-white"
         }  py-2 px-4 text-sm`}
       >
