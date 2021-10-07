@@ -12,7 +12,7 @@ const SingleChat: React.FC<Iprops> = ({
 }) => {
   return (
     <div
-      className={`h-16 flex items-center border-b-2 border-b-1  justify-between cursor-pointer ${
+      className={`h-16 flex items-center border-b border-b-1  justify-between cursor-pointer ${
         id === selectedChat && "bg-gray-200"
       }`}
       onClick={() => setSelectedChat(id)}
@@ -25,9 +25,7 @@ const SingleChat: React.FC<Iprops> = ({
         </div>
       </div>
 
-      {id === selectedChat && (
-        <div className="w-4 bg-purple-900 h-16 rounded-r-md"></div>
-      )}
+      {id === selectedChat && <div className="w-4 bg-purple-900 h-16  "></div>}
     </div>
   );
 };

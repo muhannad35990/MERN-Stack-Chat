@@ -7,7 +7,7 @@ const ChatContent = () => {
   return (
     <div className="h-full flex flex-col justify-between items-center">
       {/* toolbar */}
-      <div className="h-16 w-full border-b-2 flex items-center justify-between">
+      <div className="h-16 w-full border-b-2 flex items-center justify-between bg-gray-200">
         <div className="flex items-center p-4  py-8 ">
           <Avatar />
           <div className="flex flex-col ml-4 ">
@@ -25,7 +25,7 @@ const ChatContent = () => {
         </div>
       </div>
       {/* chat messages */}
-      <div className="flex-1 w-full  bg-gray-100 flex flex-col  ">
+      <div className="flex-1 w-full  bg-white flex flex-col  ">
         <SingleMessage
           sender="muhannad"
           message="Hi, how are you?"
