@@ -26,7 +26,7 @@ const SingleChat: React.FC<Iprops> = ({
       </div>
 
       {id === selectedChat && (
-        <div className="w-4 bg-purple-500 h-16 rounded-r-md"></div>
+        <div className="w-4 bg-purple-900 h-16 rounded-r-md"></div>
       )}
     </div>
   );

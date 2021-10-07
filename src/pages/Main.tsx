@@ -20,7 +20,7 @@ const Main = () => {
           <input
             type="text"
             placeholder="Search ..."
-            className="w-90% border-2 rounded-xl  outline-none px-4 text-sm  text-gray-600 py-2 focus:outline-none  focus:ring-1 focus:border-purple-300  transition ease-in duration-100 mb-4"
+            className="w-90% border-2 rounded-full  outline-none px-4 text-sm  text-gray-600 py-2 focus:outline-none  focus:ring-1 focus:border-purple-300  transition ease-in duration-100 mb-4"
           />
         </div>
         <div className="flex flex-col h-full">
