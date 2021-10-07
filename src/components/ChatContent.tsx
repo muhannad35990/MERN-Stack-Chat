@@ -39,8 +39,8 @@ const ChatContent = () => {
           isReceived={true}
         />
         <SingleMessage
-          sender="muhannad"
-          message="Hi, how are you?"
+          sender="Ali"
+          message="Lorem Ipsum is simply dummy text of the printing and typesetting industry.  "
           date="07.10.2021 16:19 PM"
           isReceived={true}
         />
