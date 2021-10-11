@@ -12,15 +12,13 @@ const SingleMessage: FC<Iprops> = ({ sender, message, date, isReceived }) => {
         isReceived ? "items-start" : "items-end"
       } justify-center flex-col max-w-60% mx-4 my-1`}
     >
-      <h4
-        className={`${isReceived ? "ml-3" : "mr-3"}  p-0 m-0 text-purple-900 `}
-      >
+      <h4 className={`${isReceived ? "ml-3" : "mr-3"}  p-0 m-0 text-gray-800 `}>
         {isReceived ? sender : "You"}
       </h4>
       <h1
         className={`rounded-full text-base ${
           isReceived
-            ? "bg-white text-purple-900 border border-purple-900"
+            ? "bg-white text-gray-900   bg-gray-200"
             : "bg-purple-900 text-white"
         }  py-2 px-4 text-sm`}
       >
