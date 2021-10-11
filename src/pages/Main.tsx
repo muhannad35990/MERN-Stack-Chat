@@ -28,56 +28,33 @@ const Main = () => {
             id={1}
             selectedChat={selectedChat}
             setSelectedChat={setSelectedChat}
+            Contact="Muhannad"
+            last_message="hey, how you doing?"
+            last_date="02:20 PM"
+            numNotifications={2}
           />
           <SingleChat
             id={2}
             selectedChat={selectedChat}
             setSelectedChat={setSelectedChat}
+            Contact="Ali agha"
+            last_message="fine ..."
+            last_date="05:20 AM"
+            numNotifications={5}
           />
           <SingleChat
             id={3}
             selectedChat={selectedChat}
             setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={4}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={5}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={6}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={7}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={8}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={9}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
-          />
-          <SingleChat
-            id={10}
-            selectedChat={selectedChat}
-            setSelectedChat={setSelectedChat}
+            Contact="Nada basha"
+            last_message="when we'll meet"
+            last_date="07:20 PM"
+            numNotifications={5}
           />
         </div>
       </div>
       <div className="w-full h-full bg-gray-100">
-        <ChatContent />
+        <ChatContent Contact="Muhannad" last_seen="11/10/2021 12:25 PM" />
       </div>
     </div>
   );

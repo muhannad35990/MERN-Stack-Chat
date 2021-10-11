@@ -1,9 +1,18 @@
 import { AttachFile, Mood, MoreVert, Send } from "@mui/icons-material";
 import { Avatar, IconButton } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import SingleMessage from "./SingleMessage";
-
-const ChatContent = () => {
+import Picker from "emoji-picker-react";
+interface Iprops {
+  Contact: string;
+  last_seen: string;
+}
+const ChatContent: FC<Iprops> = ({ Contact, last_seen }) => {
+  const [showSmilePad, setShowSmilePad] = useState(false);
+  const [currentText, setCurrentText] = useState("");
+  const onEmojiClick = (event: any, emojiObject: any) => {
+    setCurrentText(currentText + emojiObject.emoji);
+  };
   return (
     <div className="h-full flex flex-col justify-between items-center">
       {/* toolbar */}
@@ -11,8 +20,8 @@ const ChatContent = () => {
         <div className="flex items-center p-4  py-8 ">
           <Avatar />
           <div className="flex flex-col ml-4 ">
-            <h1 className="font-bold text-gray-800">Ali</h1>
-            <h3 className="text-xs text-gray-500">7.10.2021 22:21 PM</h3>
+            <h1 className="font-bold text-gray-800">{Contact}</h1>
+            <h3 className="text-xs text-gray-500">{last_seen}</h3>
           </div>
         </div>
         <div className="flex items-center mr-4">
@@ -46,17 +55,28 @@ const ChatContent = () => {
         />
         <SingleMessage
           sender="muhannad"
-          message="Hi, how are you?"
+          message={currentText}
           date="07.10.2021 16:19 PM"
           isReceived={false}
         />
       </div>
       {/* typing box */}
       <div className="w-full h-12   flex justify-between items-center">
-        <IconButton>
-          <Mood className="text-purple-900" />
+        <IconButton onClick={() => setShowSmilePad(!showSmilePad)}>
+          <Mood className="text-purple-900 relative" />
+          {showSmilePad && (
+            <div className="absolute bottom-12 left-0">
+              <Picker onEmojiClick={onEmojiClick} />
+            </div>
+          )}
         </IconButton>
-        <input type="text" className="w-full rounded-full p-2" />
+
+        <input
+          type="text"
+          className="w-full rounded-full p-2 outline-none focus:ring-1 focus:border-purple-300  transition ease-in duration-100  "
+          onChange={(e) => setCurrentText(e.target.value)}
+          value={currentText}
+        />
         <IconButton>
           <Send className="text-purple-900" />
         </IconButton>
