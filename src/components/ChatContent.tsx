@@ -73,7 +73,7 @@ const ChatContent: FC<Iprops> = ({ Contact, last_seen }) => {
 
         <input
           type="text"
-          className="w-full rounded-full p-2 outline-none focus:ring-1 focus:border-purple-300  transition ease-in duration-100  "
+          className="w-full rounded-full p-2 outline-none focus:ring-1 focus:border-purple-300  transition ease-in duration-100 px-4 "
           onChange={(e) => setCurrentText(e.target.value)}
           value={currentText}
         />
